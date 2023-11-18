@@ -173,4 +173,26 @@ button {
   .header__task {
     padding: 1rem 2rem;
   }
+}
+@media (min-width: 992px) {
+  .header__title {
+    font-size: 8rem;
+  }
+  .header__calendar {
+    gap: 3rem;
+    font-size: 6rem;
+  }
+  .header__calendar i {
+    font-size: 6rem;
+  }
+  .header__top-input {
+    font-size: 3rem;
+  }
+  .header__task {
+    padding: 1rem 2rem;
+    font-size: 2.3rem;
+  }
+  .header__bottom {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

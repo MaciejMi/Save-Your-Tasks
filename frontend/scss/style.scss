@@ -198,3 +198,31 @@ button {
 		}
 	}
 }
+
+@media (min-width: 992px) {
+	.header {
+		&__title {
+			font-size: 8rem;
+		}
+		&__calendar {
+			gap: 3rem;
+			font-size: 6rem;
+			i {
+				font-size: 6rem;
+			}
+		}
+
+		&__top-input {
+			font-size: 3rem;
+		}
+
+		&__task {
+			padding: 1rem 2rem;
+			font-size: 2.3rem;
+		}
+
+		&__bottom {
+			font-size: 2rem;
+		}
+	}
+}
