@@ -1,0 +1,11 @@
+RewriteEngine on
+RewriteRule "todos/$" "todos.php"
+RewriteRule "todos" "todos.php"
+RewriteRule "todos/(.*)$" "todos.php?id=$1"
+RewriteRule "todos.php/$" "todos.php"
+RewriteRule "todos.php/(.*)$" "todos.php?id=$1"
+RewriteRule "categories/$" "categories.php"
+RewriteRule "categories" "categories.php"
+RewriteRule "categories/(.*)$" "categories.php?name=$1"
+RewriteRule "categories.php/$" "categories.php"
+RewriteRule "categories.php/(.*)$" "categories.php?name=$1"
