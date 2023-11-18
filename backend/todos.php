@@ -12,7 +12,6 @@
     $post_status = $_POST['status'] ?? null;
     $post_date = $_POST['date'] ?? null;
     $post_category = $_POST['category'] ?? null;
-
     
 
     if ($_SERVER['REQUEST_METHOD'] === 'GET'){
