@@ -105,6 +105,10 @@ button {
   align-items: center;
   justify-content: center;
 }
+.header__buttons {
+  display: flex;
+  gap: 1rem;
+}
 .header__buttons i {
   color: #ffffff;
   font-size: 1.6rem;
@@ -150,5 +154,23 @@ button {
   }
   .section {
     padding: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 6rem;
+  }
+  .header__calendar {
+    gap: 2rem;
+    font-size: 4rem;
+  }
+  .header__calendar i {
+    font-size: 4rem;
+  }
+  .header__top-input {
+    font-size: 2rem;
+  }
+  .header__task {
+    padding: 1rem 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -114,6 +114,8 @@ button {
 	}
 
 	&__buttons {
+		display: flex;
+		gap: 1rem;
 		i {
 			color: c.$font-color;
 			font-size: 1.6rem;
@@ -171,5 +173,28 @@ button {
 
 	.section {
 		padding: 2rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		&__title {
+			font-size: 6rem;
+		}
+		&__calendar {
+			gap: 2rem;
+			font-size: 4rem;
+			i {
+				font-size: 4rem;
+			}
+		}
+
+		&__top-input {
+			font-size: 2rem;
+		}
+
+		&__task {
+			padding: 1rem 2rem;
+		}
 	}
 }
