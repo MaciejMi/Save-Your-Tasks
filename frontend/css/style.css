@@ -117,4 +117,38 @@ button {
 .section {
   background-color: #242443;
   padding: 1rem;
+}
+
+@media (min-width: 576px) {
+  .header__title {
+    font-size: 5rem;
+  }
+  .header__calendar {
+    gap: 1.5rem;
+    font-size: 3rem;
+  }
+  .header__calendar i {
+    font-size: 3rem;
+  }
+  .header__top-input {
+    font-size: 1.8rem;
+  }
+  .header__main {
+    gap: 2rem;
+  }
+  .header__task {
+    padding: 1rem;
+  }
+  .header__bottom {
+    gap: 1.5rem;
+  }
+  .header__buttons i {
+    font-size: 1.8rem;
+  }
+  .header__buttons button {
+    padding: 1rem;
+  }
+  .section {
+    padding: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */

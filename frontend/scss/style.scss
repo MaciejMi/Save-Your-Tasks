@@ -129,3 +129,47 @@ button {
 	background-color: c.$second-bg-color;
 	padding: 1rem;
 }
+
+@media (min-width: 576px) {
+	.header {
+		&__title {
+			font-size: 5rem;
+		}
+		&__calendar {
+			gap: 1.5rem;
+			font-size: 3rem;
+			i {
+				font-size: 3rem;
+			}
+		}
+
+		&__top-input {
+			font-size: 1.8rem;
+		}
+
+		&__main {
+			gap: 2rem;
+		}
+
+		&__task {
+			padding: 1rem;
+		}
+
+		&__bottom {
+			gap: 1.5rem;
+		}
+
+		&__buttons {
+			i {
+				font-size: 1.8rem;
+			}
+			button {
+				padding: 1rem;
+			}
+		}
+	}
+
+	.section {
+		padding: 2rem;
+	}
+}
