@@ -34,6 +34,10 @@ button {
   cursor: pointer;
 }
 
+option {
+  color: #000;
+}
+
 .prompt {
   display: none;
 }
@@ -151,6 +155,9 @@ button {
   gap: 1rem;
   flex-wrap: wrap;
   background-color: #2C2C51;
+}
+.header .checked p:first-of-type {
+  text-decoration: line-through;
 }
 .header__checkbox {
   width: 15px;

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <button class="prompt__close-btn">
             <i class="ti ti-x"></i>
         </button>
-        <div class="prompt__edit-box ">
+        <div class="prompt__edit-box update-box">
             <div>
                 <p>Done?</p><input type="checkbox">
             </div>
@@ -35,10 +35,16 @@
                 Update
             </button>
         </div>
-        <div class="prompt__edit-box">
+        <div class="prompt__edit-box create-box">
             <input type="text" placeholder="Enter a name of your category">
             <button class="header__btn">
                 Create
+            </button>
+        </div>
+        <div class="prompt__edit-box delete-box">
+            <p>Do you really want to delete this todo?</p>
+            <button class="header__btn header__btn--delete">
+                Delete
             </button>
         </div>
     </div>
@@ -48,48 +54,22 @@
             <span>S</span>ave <span>Y</span>our <span>T</span>asks
         </h1>
         <div class="header__calendar">
-            <button><i class="ti ti-arrow-badge-left-filled"></i>
+            <button class="past-button"><i class="ti ti-arrow-badge-left-filled"></i>
             </button>
             <p>18th November 2023</p>
-            <button><i class="ti ti-arrow-badge-right-filled"></i>
+            <button class=><i class="ti ti-arrow-badge-right-filled"></i>
             </button>
         </div>
         <div class="header__top section">
             <input class="header__top-input" placeholder="Add your tasks..." />
-            <select class="header__select" name="">
+            <select class="header__select header__select--add" name="">
                 <option value="">Choose category</option>
             </select>
-            <button class="header__btn"><i class="ti ti-square-plus"></i> Add Task</button>
+            <button class="header__btn header__btn--add"><i class="ti ti-square-plus"></i> Add Task</button>
         </div>
 
         <div class="header__main section ">
-            <div class="header__task">
-                <input class="header__checkbox" type="checkbox" name="">
-                <p class="header__task-description">Go to shopping on Kielce Galeria Echo</p>
-                <p class="header__task-category">Home</p>
-                <div class="header__buttons">
-                    <button class="header__task-update-button"><i class="ti ti-pencil"></i></button>
-                    <button class="header__task-delete-button"><i class="ti ti-x"></i></button>
-                </div>
-            </div>
-            <div class="header__task">
-                <input class="header__checkbox" type="checkbox" name="">
-                <p class="header__task-description">Go to shopping on Kielce Galeria Echo</p>
-                <p class="header__task-category">Home</p>
-                <div class="header__buttons">
-                    <button class="header__task-update-button"><i class="ti ti-pencil"></i></button>
-                    <button class="header__task-delete-button"><i class="ti ti-x"></i></button>
-                </div>
-            </div>
-            <div class="header__task">
-                <input class="header__checkbox" type="checkbox" name="">
-                <p class="header__task-description">Go to shopping on Kielce Galeria Echo</p>
-                <p class="header__task-category">Home</p>
-                <div class="header__buttons">
-                    <button class="header__task-update-button"><i class="ti ti-pencil"></i></button>
-                    <button class="header__task-delete-button"><i class="ti ti-x"></i></button>
-                </div>
-            </div>
+
 
         </div>
         <div class="header__bottom section">

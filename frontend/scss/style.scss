@@ -35,6 +35,10 @@ button {
 	cursor: pointer;
 }
 
+option {
+	color: #000;
+}
+
 .prompt {
 	display: none;
 
@@ -161,6 +165,10 @@ button {
 		gap: 1rem;
 		flex-wrap: wrap;
 		background-color: c.$task-bg;
+	}
+
+	.checked p:first-of-type {
+		text-decoration: line-through;
 	}
 
 	&__checkbox {

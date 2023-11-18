@@ -121,47 +121,44 @@
                 echo json_encode(false);
             }
         }
-    }else if ($_SERVER['REQUEST_METHOD'] == "PUT"){
-        if (is_null($get_id) OR (is_null($get_text) AND is_null($get_status) AND is_null($get_date) AND is_null($get_category))) {
+    }else if ($_SERVER['REQUEST_METHOD'] === "PUT"){
+        $query = "UPDATE todo SET ";
+        $isChanged = false;
+        $values = [];
+        
+        if (is_null($get_id)){
             echo json_encode(false);
             return;
-        }else{
-            $query = "UPDATE todo SET ";
-            $isChanged = false;
-            $values = [];
-            
-            if (!is_null($get_id)){
-                $query .= "todo.id = :id";
-                $isChanged = true;
-                $values[':id'] = $get_id;
-            }
-            if (!is_null($get_text)){
-                $query .= $isChanged ? ", todo.text = :text" : "todo.text = :text";
-                $isChanged = true;
-                $values[':text'] = $get_text;
-            }
-            if (!is_null($get_status)){
-                $query .= $isChanged ? ", todo.status = :status" : "todo.status = :status";
-                $isChanged = true;
-                $values[':status'] = $get_status;
-            }
-            if (!is_null($get_date)){
-                $query .= $isChanged ? ", todo.date = :date" : "todo.date = :date";
-                $isChanged = true;
-                $values[':date'] = $get_date;
-            }
-            if (!is_null($get_category)){
-                $query .= $isChanged ? ", todo.category_id = :category_id" : "todo.category_id = :category_id";
-                $isChanged = true;
-                $values[':category_id'] = $get_category;
-            }
-            $stmt = $conn -> prepare($query);
-            try{
-                $stmt -> execute($values);
-                echo json_encode(["id" => $get_id]);
-            }catch (PDOException $e){
-                echo json_encode(false);
-            }
+        }
+        
+        if (!is_null($get_text)){
+            $query .= $isChanged ? ", todo.text = :text" : "todo.text = :text";
+            $isChanged = true;
+            $values[':text'] = $get_text;
+        }
+        if (!is_null($get_status)){
+            $query .= $isChanged ? ", todo.status = :status" : "todo.status = :status";
+            $isChanged = true;
+            $values[':status'] = $get_status;
+        }
+        if (!is_null($get_date)){
+            $query .= $isChanged ? ", todo.date = :date" : "todo.date = :date";
+            $isChanged = true;
+            $values[':date'] = $get_date;
+        }
+        if (!is_null($get_category)){
+            $query .= $isChanged ? ", todo.category_id = :category_id" : "todo.category_id = :category_id";
+            $isChanged = true;
+            $values[':category_id'] = $get_category;
+        }
+        $query .= " WHERE todo.id = :id;";
+        $values[":id"] = $get_id;
+        $stmt = $conn -> prepare($query);
+        try{
+            $stmt -> execute($values);
+            echo json_encode(["id" => $get_id]);
+        }catch (PDOException $e){
+            echo json_encode(false);
         }
     }
 
