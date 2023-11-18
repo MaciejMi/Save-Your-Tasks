@@ -28,22 +28,22 @@
                 $values[':id'] = $get_id;
             }
             if (!is_null($get_text)){
-                $query .= $isChanged ? ", todo.text = :text" : "todo.text = :text";
+                $query .= $isChanged ? " AND todo.text = :text" : "todo.text = :text";
                 $isChanged = true;
                 $values[':text'] = $get_text;
             }
             if (!is_null($get_status)){
-                $query .= $isChanged ? ", todo.status = :status" : "todo.status = :status";
+                $query .= $isChanged ? " AND todo.status = :status" : "todo.status = :status";
                 $isChanged = true;
                 $values[':status'] = $get_status;
             }
             if (!is_null($get_date)){
-                $query .= $isChanged ? ", todo.date = :date" : "todo.date = :date";
+                $query .= $isChanged ? " AND todo.date = :date" : "todo.date = :date";
                 $isChanged = true;
                 $values[':date'] = $get_date;
             }
             if (!is_null($get_category)){
-                $query .= $isChanged ? ", todo.category_id = :category_id" : "todo.category_id = :category_id";
+                $query .= $isChanged ? " AND todo.category_id = :category_id" : "todo.category_id = :category_id";
                 $isChanged = true;
                 $values[':category_id'] = $get_category;
             }

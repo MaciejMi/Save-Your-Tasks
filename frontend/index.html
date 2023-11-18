@@ -23,21 +23,17 @@
             <i class="ti ti-x"></i>
         </button>
         <div class="prompt__edit-box update-box">
-            <div>
-                <p>Done?</p><input type="checkbox">
-            </div>
-            <input type="text" placeholder="Enter a text">
-            <input type="date" placeholder=" Enter a date">
-            <select class="header__select" name="">
+            <input type="text" class="header__input-update" placeholder="Enter a text">
+            <select class="header__select header__select-upadte" name="">
                 <option value="">Choose category</option>
             </select>
-            <button class="header__btn">
+            <button class="header__btn header__btn-update">
                 Update
             </button>
         </div>
         <div class="prompt__edit-box create-box">
-            <input type="text" placeholder="Enter a name of your category">
-            <button class="header__btn">
+            <input type="text" class="header__btn--create-input" placeholder="Enter a name of your category">
+            <button class="header__btn header__btn--create">
                 Create
             </button>
         </div>
@@ -57,7 +53,7 @@
             <button class="past-button"><i class="ti ti-arrow-badge-left-filled"></i>
             </button>
             <p>18th November 2023</p>
-            <button class=><i class="ti ti-arrow-badge-right-filled"></i>
+            <button class="future-button"><i class="ti ti-arrow-badge-right-filled"></i>
             </button>
         </div>
         <div class="header__top section">
@@ -66,6 +62,7 @@
                 <option value="">Choose category</option>
             </select>
             <button class="header__btn header__btn--add"><i class="ti ti-square-plus"></i> Add Task</button>
+            <button class="header__btn header__btn--add-category"><i class="ti ti-menu"></i></button>
         </div>
 
         <div class="header__main section ">

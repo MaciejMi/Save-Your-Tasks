@@ -147,6 +147,9 @@ option {
   gap: 1rem;
   justify-content: center;
 }
+.header__main p {
+  text-align: center;
+}
 .header__task {
   padding: 1rem;
   display: flex;
