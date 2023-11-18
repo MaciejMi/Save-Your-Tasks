@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Your Tasks</title>
+    <meta name="description"
+        content="Do you have a lot of tasks to do? You don't know where you should place it? Save Your Tasks is the best place to do this!">
+    <meta name="keywords" content="todolist, to-do-list, todoap, to-do-app, tasks manager">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            <span>S</span>ave <span>Y</span>our <span>T</span>asks
+        </h1>
+        <div class="header__calendar">
+            <button><i class="ti ti-arrow-badge-left-filled"></i>
+            </button>
+            <p>18th November 2023</p>
+            <button><i class="ti ti-arrow-badge-right-filled"></i>
+            </button>
+        </div>
+        <div class="header__top section">
+            <input class="header__top-input" placeholder="Add your tasks..." />
+            <select class="header__select" name="">
+                <option value="">Choose category</option>
+            </select>
+            <button class="header__btn"><i class="ti ti-square-plus"></i> Add Task</button>
+        </div>
+
+        <div class="header__main section ">
+            <div class="header__task">
+                <input type="checkbox" name="">
+                <p class="header__task-description">Go to shopping on Kielce Galeria Echo</p>
+                <p class="header__task-category">Home</p>
+                <div class="header__buttons">
+                    <button class="header__task-update-button"><i class="ti ti-pencil"></i></button>
+                    <button class="header__task-delete-button"><i class="ti ti-x"></i></button>
+                </div>
+            </div>
+            <div class="header__task">
+                <input type="checkbox" name="">
+                <p class="header__task-description">Go to shopping on Kielce Galeria Echo</p>
+                <p class="header__task-category">Home</p>
+                <div class="header__buttons">
+                    <button class="header__task-update-button"><i class="ti ti-pencil"></i></button>
+                    <button class="header__task-delete-button"><i class="ti ti-x"></i></button>
+                </div>
+            </div>
+            <div class="header__task">
+                <input type="checkbox" name="">
+                <p class="header__task-description">Go to shopping on Kielce Galeria Echo</p>
+                <p class="header__task-category">Home</p>
+                <div class="header__buttons">
+                    <button class="header__task-update-button"><i class="ti ti-pencil"></i></button>
+                    <button class="header__task-delete-button"><i class="ti ti-x"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom section">
+            <p class="header__bottom-tasks">Tasks: 43</p>
+            <p class="header__bottom-completed">Completed: 23</p>
+            <p class="header__bottom-uncompleted">Uncompleted: 20</p>
+            <select class="header__select" name="">
+                <option value="">Choose category</option>
+            </select>
+            <button class="header__btn">Clear Completed</button>
+        </div>
+    </header>
+</body>
+
+</html>
