@@ -86,7 +86,7 @@ pastButton.addEventListener('click', () => {
 });
 
 futureButton.addEventListener('click', () => {
-	if (currentDay => 1 && currentDay < 30) {
+	if (currentDay >= 1 && currentDay < 30) {
 		currentDay += 1;
 		changeTextOnCalendar(currentDay);
 		currentDate = new Date().getFullYear() + '-' + Number(new Date().getMonth() + 1) + '-' + currentDay;
