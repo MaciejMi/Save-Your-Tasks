@@ -105,6 +105,11 @@ button {
 		background-color: c.$task-bg;
 	}
 
+	&__checkbox {
+		width: 15px;
+		height: 15px;
+	}
+
 	&__bottom {
 		display: flex;
 		flex-wrap: wrap;
@@ -196,6 +201,10 @@ button {
 		&__task {
 			padding: 1rem 2rem;
 		}
+		&__checkbox {
+			width: 20px;
+			height: 20px;
+		}
 	}
 }
 
@@ -210,6 +219,11 @@ button {
 			i {
 				font-size: 6rem;
 			}
+		}
+
+		&__checkbox {
+			width: 30px;
+			height: 30px;
 		}
 
 		&__top-input {

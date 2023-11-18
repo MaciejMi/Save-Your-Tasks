@@ -98,6 +98,10 @@ button {
   flex-wrap: wrap;
   background-color: #2C2C51;
 }
+.header__checkbox {
+  width: 15px;
+  height: 15px;
+}
 .header__bottom {
   display: flex;
   flex-wrap: wrap;
@@ -173,6 +177,10 @@ button {
   .header__task {
     padding: 1rem 2rem;
   }
+  .header__checkbox {
+    width: 20px;
+    height: 20px;
+  }
 }
 @media (min-width: 992px) {
   .header__title {
@@ -184,6 +192,10 @@ button {
   }
   .header__calendar i {
     font-size: 6rem;
+  }
+  .header__checkbox {
+    width: 30px;
+    height: 30px;
   }
   .header__top-input {
     font-size: 3rem;
