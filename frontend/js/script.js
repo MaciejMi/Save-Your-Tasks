@@ -76,6 +76,8 @@ const changeTextOnCalendar = day => {
 	paragraphCalendar.textContent = day + 'th' + ' November 2023';
 };
 
+changeTextOnCalendar(currentDay);
+
 pastButton.addEventListener('click', () => {
 	if (currentDay > 1 && currentDay <= 30) {
 		currentDay -= 1;
@@ -117,12 +119,14 @@ const reloadTask = (category = null, date = currentDate) => {
 			});
 			if (json.length == []) {
 				const p = document.createElement('p');
-				p.textContent = 'Brak rekordów';
+				p.textContent = 'No tasks in this day';
 				headerMain.appendChild(p);
 			}
 		})
 		.catch(error => console.log(error));
 };
+
+reloadTask();
 
 // PROMPT
 
@@ -299,4 +303,3 @@ headerBtnClear.addEventListener('click', () => {
 findTasksSelect.addEventListener('click', () => {
 	reloadTask(findTasksSelect.value);
 });
-reloadTask();
