@@ -101,7 +101,6 @@ futureButton.addEventListener('click', () => {
 const reloadTask = (category = null, date = currentDate) => {
 	countsOfTasks = 0;
 	countsOfCompleted = 0;
-	countOfUncompleted = 0;
 
 	headerMain.innerHTML = '';
 
