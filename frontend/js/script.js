@@ -73,7 +73,15 @@ let currentDate = new Date().getFullYear() + '-' + Number(new Date().getMonth() 
 let currentDay = new Date().getDate();
 
 const changeTextOnCalendar = day => {
-	paragraphCalendar.textContent = day + 'th' + ' November 2023';
+	if (day === 1) {
+		paragraphCalendar.textContent = day + 'st' + ' November 2023';
+	} else if (day === 2) {
+		paragraphCalendar.textContent = day + 'nd' + ' November 2023';
+	} else if (day === 3) {
+		paragraphCalendar.textContent = day + 'rd' + ' November 2023';
+	} else {
+		paragraphCalendar.textContent = day + 'th' + ' November 2023';
+	}
 };
 
 changeTextOnCalendar(currentDay);
